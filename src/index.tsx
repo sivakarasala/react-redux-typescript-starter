@@ -26,4 +26,8 @@ class App extends React.Component<AppProps> {
   }
 }
 
-ReactDOM.render(<App />, document.querySelector("#root"));
+const AppFunc = (props: AppProps): JSX.Element => {
+  return <div>{props.color}</div>;
+};
+
+ReactDOM.render(<AppFunc color="green" />, document.querySelector("#root"));
